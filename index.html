@@ -3,163 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Umars Chauffeur Services — BMW X5 M Sport 40e Private Hire</title>
-  <meta name="description" content="Pre-booked private hire across Renfrewshire. BMW X5 M Sport 40e (plug-in hybrid). Airport transfers, events, corporate travel." />
+  <title>Gleniffer Executive Travel — Luxury BMW X5 M Sport 40e Private Hire</title>
+  <meta name="description" content="Luxury private hire from Paisley across Renfrewshire. BMW X5 M Sport 40e (plug-in hybrid), LEZ compliant. Airport transfers, executive travel, events." />
 
   <style>
     :root{
-      --bg:#0b1220; --card:#111a2e; --text:#e8eefc; --muted:#a8b3d6;
-      --accent:#7c5cff; --accent2:#28d7a7; --border:rgba(255,255,255,.10);
-      --shadow: 0 18px 60px rgba(0,0,0,.35); --radius: 18px; --max: 1040px;
+      --bg:#070a0f;
+      --bg2:#0c1220;
+      --card: rgba(14,18,28,.72);
+      --border: rgba(255,255,255,.10);
+      --text:#f3f6ff;
+      --muted: rgba(243,246,255,.72);
+      --gold:#d7b46a;
+      --gold2:#f4e1ad;
+      --shadow: 0 26px 90px rgba(0,0,0,.55);
+      --radius: 22px;
+      --max: 1120px;
     }
     *{ box-sizing:border-box; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color:var(--text);
+      color: var(--text);
       background:
-        radial-gradient(900px 500px at 15% 10%, rgba(124,92,255,.35), transparent 60%),
-        radial-gradient(900px 500px at 85% 35%, rgba(40,215,167,.25), transparent 60%),
-        var(--bg);
-      line-height:1.5;
+        radial-gradient(900px 500px at 18% 8%, rgba(215,180,106,.22), transparent 60%),
+        radial-gradient(900px 500px at 85% 24%, rgba(120,92,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 65% 85%, rgba(40,215,167,.14), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      line-height: 1.55;
     }
     a{ color:inherit; text-decoration:none; }
-    .container{ width:min(var(--max), calc(100% - 32px)); margin:0 auto; }
-
+    .container{ width:min(var(--max), calc(100% - 34px)); margin:0 auto; }
     header{
-      position:sticky; top:0; z-index:10;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.65);
-      border-bottom:1px solid var(--border);
+      position:sticky; top:0; z-index:100;
+      background: rgba(7,10,15,.62);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
-    .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px; }
-    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; white-space:nowrap; }
-    .logo{
-      width:34px;height:34px;border-radius:12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 10px 24px rgba(124,92,255,.25);
-      flex:0 0 auto;
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0; gap: 14px;
     }
-    .links{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-    .links a{ padding:10px 12px; border-radius:12px; color:var(--muted); }
-    .links a:hover{ background: rgba(255,255,255,.06); color:var(--text); }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight: 900; letter-spacing:.2px; white-space:nowrap;
+    }
+    .mark{
+      width: 34px; height:34px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--gold), rgba(255,255,255,.28));
+      box-shadow: 0 14px 30px rgba(215,180,106,.14);
+      border: 1px solid rgba(215,180,106,.35);
+    }
+    .links{ display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .links a{
+      padding: 10px 12px; border-radius: 999px;
+      color: rgba(243,246,255,.80);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+    }
+    .links a:hover{ border-color: rgba(215,180,106,.42); background: rgba(215,180,106,.06); }
 
-    main{ padding:28px 0 42px; }
-
+    main{ padding: 28px 0 44px; }
     .card{
-      background: rgba(17,26,46,.65);
-      border:1px solid var(--border);
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .pad{ padding:16px; }
+    .pad{ padding: 18px; }
 
     .hero{
       display:grid;
       grid-template-columns: 1.15fr .85fr;
-      gap:14px;
+      gap: 14px;
       align-items:stretch;
-      margin-top:12px;
+      margin-top: 14px;
     }
-    @media (max-width: 900px){ .hero{ grid-template-columns:1fr; } }
+    @media (max-width: 920px){ .hero{ grid-template-columns:1fr; } }
 
-    h1{ margin:0 0 10px; font-size: clamp(28px, 4vw, 44px); line-height:1.05; letter-spacing:-.4px; }
-    h2{ margin:0 0 10px; font-size: 20px; letter-spacing:-.2px; }
-    h3{ margin:0 0 6px; font-size: 16px; }
-    p{ margin:0; color:var(--muted); }
-
-    .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    h1{
+      margin:0 0 12px;
+      font-size: clamp(30px, 4.4vw, 54px);
+      line-height: 1.02;
+      letter-spacing: -0.6px;
+    }
+    h2{
+      margin:0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+    h3{ margin:0 0 6px; font-size: 16px; letter-spacing: -0.1px; }
+    p{ margin:0; color: var(--muted); }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size: 13px; color: rgba(243,246,255,.78);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(215,180,106,.30);
+      background: rgba(215,180,106,.08);
+      width: fit-content;
+    }
+    .gold{ color: var(--gold2); }
+    .pill-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
     .pill{
-      border:1px solid var(--border);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color: rgba(243,246,255,.78);
+    }
+    .pill.gold{
+      border-color: rgba(215,180,106,.34);
+      background: rgba(215,180,106,.08);
+      color: rgba(244,225,173,.95);
+    }
+
+    section{ margin-top: 14px; }
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    @media (max-width: 900px){ .grid3{ grid-template-columns:1fr; } }
+    @media (max-width: 720px){ .grid2{ grid-template-columns:1fr; } }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      width:100%;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.05);
-      padding:8px 10px;
-      border-radius:999px;
-      color: var(--muted);
+      color: var(--text);
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      font-weight: 800;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(215,180,106,.34); }
+    .btn.primary{
+      border: 1px solid rgba(215,180,106,.44);
+      background: linear-gradient(135deg, rgba(215,180,106,.92), rgba(244,225,173,.70));
+      color: #0b0f16;
+      box-shadow: 0 18px 44px rgba(215,180,106,.12);
+    }
+    .btn.ghost{ background: rgba(255,255,255,.03); }
+
+    .actions{ display:grid; gap:10px; margin-top: 12px; }
+    .small{ font-size: 12px; color: rgba(243,246,255,.65); margin-top: 8px; }
+
+    .note{
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: rgba(243,246,255,.72);
+      font-size: 13px;
+    }
+    .note strong{ color: rgba(244,225,173,.92); }
+    .list{ margin: 8px 0 0; padding-left: 18px; color: rgba(243,246,255,.70); }
+    .list li{ margin: 6px 0; }
+
+    .figure{
+      margin:0;
+      overflow:hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+    }
+    .figure img{
+      width:100%;
+      display:block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      filter: contrast(1.03) saturate(1.03);
+    }
+    .figcap{
+      padding: 12px;
+      color: rgba(243,246,255,.72);
+      border-top: 1px solid rgba(255,255,255,.10);
       font-size: 13px;
     }
 
-    section{ margin-top:14px; }
-    .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    .grid3{ display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; }
-    @media (max-width: 900px){ .grid3{ grid-template-columns:1fr; } }
-    @media (max-width: 700px){ .grid2{ grid-template-columns:1fr; } }
+    /* Pricing table */
+    .table{
+      width:100%;
+      border-collapse: collapse;
+      overflow:hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+    }
+    .table th, .table td{
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      text-align:left;
+      font-size: 14px;
+    }
+    .table th{ color: rgba(244,225,173,.92); font-size: 13px; letter-spacing:.2px; text-transform: uppercase; }
+    .table tr:last-child td{ border-bottom:none; }
+    .price{ font-weight: 900; color: rgba(243,246,255,.92); }
+    .from{ color: rgba(243,246,255,.60); font-size: 12px; }
 
-    label{ display:block; font-size:13px; color:var(--muted); margin:10px 0 6px; }
+    /* Form */
+    label{ display:block; font-size: 13px; color: rgba(243,246,255,.72); margin: 10px 0 6px; }
     input, select, textarea{
       width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
+      padding: 12px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
       color: var(--text);
       outline:none;
     }
-    textarea{ min-height:110px; resize:vertical; }
+    textarea{ min-height: 110px; resize: vertical; }
     input:focus, select:focus, textarea:focus{
-      border-color: rgba(124,92,255,.55);
-      box-shadow: 0 0 0 4px rgba(124,92,255,.14);
+      border-color: rgba(215,180,106,.48);
+      box-shadow: 0 0 0 4px rgba(215,180,106,.12);
     }
 
-    .btn{
-      display:inline-flex;
+    /* Floating WhatsApp */
+    .fab{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 999;
+      display:flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      cursor:pointer;
-      transition: transform .12s ease, background .12s ease;
-      user-select:none;
-      width:100%;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(215,180,106,.36);
+      background: rgba(7,10,15,.70);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 50px rgba(0,0,0,.62);
+      color: rgba(244,225,173,.95);
+      font-weight: 900;
     }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); }
-    .btn.primary{
-      border:none;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color:#07101f;
-      font-weight:900;
-      box-shadow: 0 14px 30px rgba(40,215,167,.12);
+    .fab:hover{ background: rgba(7,10,15,.84); }
+    .fab svg{ width:20px; height:20px; flex:0 0 auto; }
+    .fab small{ color: rgba(243,246,255,.70); font-weight: 800; }
+    @media (max-width: 380px){
+      .fab span{ display:none; }
+      .fab{ padding: 12px; }
     }
 
-    .actions{ display:grid; gap:10px; margin-top:14px; }
-    .small{ font-size:12px; color: rgba(168,179,214,.85); margin-top:8px; }
-
-    .note{
-      margin-top:10px;
-      border:1px dashed rgba(255,255,255,.18);
-      background: rgba(255,255,255,.04);
-      padding:12px;
-      border-radius: 16px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .list{ margin:0; padding-left: 18px; color: var(--muted); }
-    .list li{ margin:6px 0; }
-
-    .car-figure{
-      margin:0;
-      overflow:hidden;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.04);
-    }
-    .car-figure img{
-      width:100%;
-      display:block;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-    .car-cap{
-      padding:12px;
-      border-top:1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    footer{ margin-top:18px; border-top:1px solid var(--border); padding-top:16px; color:var(--muted); font-size:13px; }
+    footer{ margin-top: 18px; border-top: 1px solid rgba(255,255,255,.10); padding-top: 16px; color: rgba(243,246,255,.70); font-size: 13px; }
+    .footerlinks a{ color: rgba(244,225,173,.92); }
+    .footerlinks a:hover{ text-decoration: underline; }
   </style>
 </head>
 
@@ -168,15 +258,16 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top">
-          <span class="logo" aria-hidden="true"></span>
-          <span id="brandName">Umars Chauffeur Services</span>
+          <span class="mark" aria-hidden="true"></span>
+          <span id="brandName">Gleniffer Executive Travel</span>
         </a>
         <nav class="links" aria-label="Primary">
           <a href="#vehicle">Vehicle</a>
-          <a href="#services">Services</a>
+          <a href="#included">Included</a>
+          <a href="#fares">Fares</a>
           <a href="#book">Book</a>
           <a href="tip.html">Tip</a>
-          <a href="#contact">Contact</a>
+          <a href="#reviews">Reviews</a>
         </nav>
       </div>
     </div>
@@ -187,110 +278,166 @@
 
       <script>
         const CONFIG = {
-          BUSINESS_NAME: "Umars Chauffeur Services",
+          BUSINESS_NAME: "Gleniffer Executive Travel",
           PHONE_DISPLAY: "07727 827100",
           WHATSAPP_NUMBER: "447727827100",
-          CAR_IMAGE_SRC: "x5.jpg"
+          REG: "UM12HNA",
+          CAR_IMAGE_SRC: "x5.jpg",
+          TIP_URL: "tip.html",
+
+          // Paste your Google review link here (and in tip.html):
+          REVIEWS_URL: ""
         };
       </script>
 
       <div class="hero">
         <div class="card pad">
-          <h1>BMW X5 M Sport 40e — Private Hire & Airport Transfers</h1>
+          <div class="kicker">Luxury private hire from <span class="gold"><b>Paisley</b></span> • Airport ready</div>
+          <h1>BMW X5 M Sport 40e <span class="gold">Luxury</span> Private Hire</h1>
           <p>
-            Serving <b>Renfrewshire</b> with premium, <b>pre-booked</b> travel — Glasgow Airport transfers, events, and long-distance hire.
-            Enjoy a smoother, quieter ride with the <b>plug-in hybrid</b> setup.
+            A premium, service-led chauffeur-style experience across Renfrewshire and beyond —
+            built for airport transfers, executive travel and special occasions.
           </p>
 
           <div class="pill-row">
-            <span class="pill">X5 M Sport 40e</span>
-            <span class="pill">Plug-in Hybrid</span>
-            <span class="pill">M Sport Aero Styling</span>
-            <span class="pill">Pre-booked only</span>
+            <span class="pill gold">LEZ compliant (Glasgow & Edinburgh)</span>
+            <span class="pill">Meet &amp; Greet included</span>
+            <span class="pill">30 mins waiting included</span>
+            <span class="pill">Plug-in hybrid comfort</span>
+            <span class="pill">CarPlay + Android Auto</span>
           </div>
 
           <div class="note">
-            <b>Private Hire only:</b> journeys are <b>pre-booked</b> in advance. This page sends your booking request to me via WhatsApp.
+            <strong>Airport Ready Promise:</strong> Meet &amp; Greet included (where access/parking allows) •
+            30 minutes complimentary waiting from scheduled landing time •
+            flight number monitoring (if provided).
           </div>
         </div>
 
         <div class="card pad" id="contact">
-          <h2>Contact</h2>
+          <h2>Book in minutes</h2>
+          <p>Fast quotes, clear rules, professional service.</p>
+
           <div class="actions">
-            <a class="btn primary" id="callBtn" href="#">Call now</a>
-            <a class="btn" id="smsBtn" href="#">Text / SMS</a>
-            <a class="btn" id="waBtn" href="#">WhatsApp</a>
-            <a class="btn" href="tip.html">Leave a tip</a>
+            <a class="btn primary" id="waBtn" href="#">WhatsApp booking</a>
+            <a class="btn" id="callBtn" href="#">Call</a>
+            <a class="btn ghost" href="#fares">View fixed fares</a>
+            <a class="btn" href="tip.html">Tip / Thank you</a>
+            <a class="btn" id="reviewBtnTop" href="#reviews">Leave a review</a>
           </div>
-          <div class="small">Phone: <span id="phoneText"></span></div>
-          <div class="small">Best for quotes: pickup + drop-off + date/time + passengers + luggage.</div>
+
+          <div class="small">
+            Phone: <span id="phoneText"></span> • Reg: <span id="regText"></span>
+          </div>
         </div>
       </div>
 
       <section id="vehicle" class="card pad">
         <h2>The vehicle</h2>
+        <div class="grid2" style="align-items:start;">
+          <figure class="figure">
+            <img id="carImg" src="x5.jpg" alt="BMW X5 M Sport 40e (Carbon Black) luxury private hire" />
+            <figcaption class="figcap">
+              Carbon Black • M Sport styling • Plug-in Hybrid • Reg: <span id="regText2"></span>
+            </figcaption>
+          </figure>
 
-        <figure class="car-figure" style="margin-top:10px;">
-          <img id="carImg" src="x5.jpg" alt="BMW X5 M Sport 40e plug-in hybrid with M Sport aero styling" />
-          <figcaption class="car-cap">BMW X5 M Sport 40e (Plug-in Hybrid) • M Sport aero styling</figcaption>
-        </figure>
+          <div>
+            <div class="grid3" style="margin-top:0;">
+              <div class="card pad" style="box-shadow:none">
+                <h3>Hybrid smoothness</h3>
+                <p>Quieter, smoother city driving when operating on electric/hybrid modes (conditions permitting).</p>
+              </div>
+              <div class="card pad" style="box-shadow:none">
+                <h3>Connectivity</h3>
+                <p>Apple CarPlay + Android Auto — use your own music and navigation.</p>
+              </div>
+              <div class="card pad" style="box-shadow:none">
+                <h3>Premium audio (POA)</h3>
+                <p>Focal speakers + subwoofer option available at additional cost (POA).</p>
+              </div>
+            </div>
 
-        <div class="grid3" style="margin-top:14px;">
-          <div class="card pad" style="box-shadow:none">
-            <h3>BMW X5 M Sport 40e</h3>
-            <p>Premium SUV with M Sport styling and strong road presence.</p>
+            <div class="note">
+              <strong>What customers love:</strong> comfort, clear communication, and airport pickups that run smoothly — especially with luggage.
+            </div>
           </div>
-          <div class="card pad" style="box-shadow:none">
-            <h3>Plug-in hybrid comfort</h3>
-            <p>Quieter, smoother driving when running on electric/hybrid modes (conditions permitting).</p>
-          </div>
-          <div class="card pad" style="box-shadow:none">
-            <h3>M Sport aero styling</h3>
-            <p>Enhanced exterior styling for a sharper, more executive look.</p>
-          </div>
-        </div>
-
-        <div class="note">
-          <b>Optional premium audio (Private Hire only) — POA</b>
-          <ul class="list">
-            <li><b>Focal speakers</b> upgrade</li>
-            <li><b>Subwoofer</b> available</li>
-            <li>Additional cost — <b>POA</b> (Price on Application)</li>
-          </ul>
-          <div class="small">If you want the premium audio option, mention it in “Notes” when booking.</div>
         </div>
       </section>
 
-      <section id="services" class="card pad">
-        <h2>Private hire services</h2>
-        <div class="grid3">
+      <section id="included" class="card pad">
+        <h2>What’s included</h2>
+        <p>Luxury feel, professional process, and clear policies.</p>
+
+        <div class="grid3" style="margin-top:12px;">
           <div class="card pad" style="box-shadow:none">
-            <h3>Airport transfers</h3>
-            <p>Glasgow Airport pickups/drop-offs, hotels, early mornings, late nights.</p>
+            <h3>Meet &amp; Greet included</h3>
+            <p>Arrivals hall pickup included for airport bookings (where access/parking allows).</p>
           </div>
           <div class="card pad" style="box-shadow:none">
-            <h3>Executive & corporate</h3>
-            <p>Meetings, client travel, day hire, professional service.</p>
+            <h3>30 mins waiting included</h3>
+            <p>Complimentary waiting from <b>scheduled landing time</b> for airport arrivals.</p>
           </div>
           <div class="card pad" style="box-shadow:none">
-            <h3>Events & occasions</h3>
-            <p>Concerts, weddings, nights out, long-distance runs and return trips.</p>
+            <h3>LEZ compliant</h3>
+            <p>Compliant for Glasgow &amp; Edinburgh LEZ (checked on the official tool).</p>
+          </div>
+        </div>
+
+        <div class="grid2" style="margin-top:10px;">
+          <div class="note">
+            <strong>After included waiting:</strong> £30/hour pro‑rata ( £7.50 per 15 mins ).
+          </div>
+          <div class="note">
+            <strong>Airport fees &amp; parking:</strong> charged at cost (receipt available). Long delays may increase parking time.
           </div>
         </div>
 
         <div class="note">
-          <b>Popular requests</b>
-          <ul class="list">
-            <li>Renfrewshire ↔ Glasgow Airport / Edinburgh / Stirling / Loch Lomond</li>
-            <li>OVO Hydro / Hampden / SEC return travel</li>
-            <li>Weddings (guest transfers) & special occasions</li>
-            <li>Golf days with luggage</li>
-          </ul>
+          <strong>Additional stops:</strong> POA — mention stops when booking so your quote is confirmed upfront.
+        </div>
+      </section>
+
+      <section id="fares" class="card pad">
+        <h2>Fixed fares from Paisley</h2>
+        <p>Premium SUV pricing — clear “from” fares for the most common journeys.</p>
+
+        <div class="note">
+          <strong>Included on airport arrivals:</strong> Meet &amp; Greet + 30 mins waiting from scheduled landing time.
+          <span class="from">Fares may vary for very late/early runs, heavy traffic, major events, or additional stops.</span>
+        </div>
+
+        <div style="margin-top:12px; overflow:auto;">
+          <table class="table" aria-label="Fixed fares from Paisley">
+            <thead>
+              <tr>
+                <th>Journey</th>
+                <th style="width:160px;">From</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Paisley → Glasgow Airport (GLA)</td><td class="price">£35</td></tr>
+              <tr><td>Glasgow Airport (GLA) → Paisley (arrivals)</td><td class="price">£45</td></tr>
+              <tr><td>Paisley → Glasgow City Centre</td><td class="price">£45</td></tr>
+              <tr><td>Paisley → SEC / OVO Hydro</td><td class="price">£50</td></tr>
+              <tr><td>Paisley → Queen Elizabeth University Hospital</td><td class="price">£45</td></tr>
+              <tr><td>Paisley → Braehead</td><td class="price">£35</td></tr>
+              <tr><td>Paisley → Silverburn</td><td class="price">£40</td></tr>
+              <tr><td>Paisley → Edinburgh Airport (EDI)</td><td class="price">£135</td></tr>
+              <tr><td>Edinburgh Airport (EDI) → Paisley (arrivals)</td><td class="price">£145</td></tr>
+              <tr><td>Paisley → Prestwick Airport (PIK)</td><td class="price">£95</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="small">
+          Want a quote for <b>Loch Lomond</b>, <b>Edinburgh city centre</b>, weddings, or day hire? Tap WhatsApp and send pickup + drop-off + time.
         </div>
       </section>
 
       <section id="book" class="card pad">
-        <h2>Book the X5</h2>
+        <h2>Book now</h2>
+        <p>Send a booking request — it opens WhatsApp with your details pre‑filled.</p>
 
         <form id="bookingForm">
           <div class="grid2">
@@ -306,11 +453,11 @@
 
           <div class="grid2">
             <div>
-              <label for="pickup">Pickup address *</label>
+              <label for="pickup">Pickup *</label>
               <input id="pickup" name="pickup" required placeholder="Street, town" />
             </div>
             <div>
-              <label for="dropoff">Drop-off address *</label>
+              <label for="dropoff">Drop-off *</label>
               <input id="dropoff" name="dropoff" required placeholder="Street, town" />
             </div>
           </div>
@@ -344,49 +491,101 @@
             </div>
           </div>
 
-          <label for="notes">Notes (flight no, child seat, stops, waiting time, premium audio request, etc.)</label>
+          <label for="notes">Notes (flight number, child seat, extra stops POA, premium audio POA, etc.)</label>
           <textarea id="notes" name="notes" placeholder="Anything I should know?"></textarea>
 
           <div class="actions">
-            <button class="btn primary" type="submit">Send private hire booking request (WhatsApp)</button>
+            <button class="btn primary" type="submit">Send request on WhatsApp</button>
             <button class="btn" type="button" id="copyBtn">Copy booking details</button>
           </div>
 
           <div class="small" id="status"></div>
 
           <div class="note">
-            <b>Quote policy:</b> prices are confirmed by message based on distance, time, and any waiting/stops.
-            <div class="small">A quote will be confirmed before any journey is accepted.</div>
+            <strong>Quick quote checklist:</strong>
+            <ul class="list">
+              <li>Pickup + drop‑off</li>
+              <li>Date + time</li>
+              <li>Passengers + luggage</li>
+              <li>Flight number (if airport)</li>
+              <li>Any stops / waiting requirements</li>
+            </ul>
           </div>
         </form>
       </section>
 
+      <section id="reviews" class="card pad">
+        <h2>Reviews</h2>
+        <p>If you enjoyed the service, a quick review helps a lot.</p>
+        <div class="actions" style="margin-top:12px;">
+          <a class="btn primary" id="reviewBtn" href="#" target="_blank" rel="noopener">Leave a Google review</a>
+          <a class="btn" href="tip.html">Tip / Thank you</a>
+        </div>
+        <div class="note" id="reviewNote">
+          <strong>Setup:</strong> paste your Google review link into <code>REVIEWS_URL</code> in this file and in tip.html.
+        </div>
+      </section>
+
       <footer class="container">
-        <div><b id="footerName">Umars Chauffeur Services</b></div>
-        <div class="small">Private Hire • Pre-booked only • © <span id="year"></span></div>
+        <div><b id="footerName">Gleniffer Executive Travel</b></div>
+        <div class="small">Luxury private hire • Pre‑booked only • © <span id="year"></span></div>
+        <div class="small footerlinks"><a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></div>
       </footer>
     </div>
   </main>
 
+  <a class="fab" id="fabWa" href="#" aria-label="Book on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.49 0 .16 5.33.16 11.9c0 2.09.55 4.13 1.59 5.94L0 24l6.35-1.67a11.86 11.86 0 0 0 5.71 1.46h.01c6.57 0 11.9-5.33 11.9-11.9 0-3.18-1.24-6.17-3.45-8.41ZM12.07 21.8h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.22-3.77.99 1-3.67-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.46 4.44-9.9 9.91-9.9 2.64 0 5.12 1.03 6.98 2.89a9.85 9.85 0 0 1 2.89 6.98c0 5.46-4.44 9.9-9.83 9.93Zm5.77-7.87c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.56-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.97-2.35-.26-.63-.53-.55-.71-.56h-.61c-.21 0-.55.08-.84.4-.29.32-1.11 1.09-1.11 2.66s1.14 3.09 1.3 3.3c.16.21 2.24 3.42 5.43 4.8.76.33 1.35.53 1.81.68.76.24 1.46.21 2.01.13.61-.09 1.88-.77 2.14-1.51.26-.74.26-1.37.18-1.51-.08-.14-.29-.21-.61-.37Z"/>
+    </svg>
+    <span>WhatsApp <small>• quick quote</small></span>
+  </a>
+
   <script>
+    // Header/branding
     document.getElementById("brandName").textContent = CONFIG.BUSINESS_NAME;
     document.getElementById("footerName").textContent = CONFIG.BUSINESS_NAME;
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("phoneText").textContent = CONFIG.PHONE_DISPLAY;
+    document.getElementById("regText").textContent = CONFIG.REG;
+    document.getElementById("regText2").textContent = CONFIG.REG;
 
+    // Links
     const cleanPhone = CONFIG.PHONE_DISPLAY.replace(/\s+/g,'');
     document.getElementById("callBtn").href = `tel:${cleanPhone}`;
-    document.getElementById("smsBtn").href  = `sms:${cleanPhone}`;
-    document.getElementById("waBtn").href   = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}`;
+    const waBase = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}`;
+    document.getElementById("waBtn").href = waBase;
+    document.getElementById("fabWa").href = waBase;
 
+    // Image
     document.getElementById("carImg").src = CONFIG.CAR_IMAGE_SRC;
 
+    // Reviews button (only enabled if you paste the link)
+    const reviewUrl = (CONFIG.REVIEWS_URL || "").trim();
+    const reviewBtn = document.getElementById("reviewBtn");
+    const reviewNote = document.getElementById("reviewNote");
+    const reviewBtnTop = document.getElementById("reviewBtnTop");
+    if (reviewUrl){
+      reviewBtn.href = reviewUrl;
+      reviewBtnTop.href = reviewUrl;
+      reviewNote.style.display = "none";
+    } else {
+      reviewBtn.href = "#";
+      reviewBtn.setAttribute("aria-disabled", "true");
+      reviewBtn.style.opacity = "0.6";
+      reviewBtn.style.pointerEvents = "none";
+      reviewBtnTop.href = "#reviews";
+    }
+
+    // Booking form -> WhatsApp message
     const form = document.getElementById("bookingForm");
     const statusEl = document.getElementById("status");
 
     function buildMessage(data){
       const lines = [
-        `🚖 *X5 M Sport 40e Private Hire Booking Request*`,
+        `✨ *Luxury Private Hire Booking Request*`,
+        `Business: ${CONFIG.BUSINESS_NAME}`,
+        `Vehicle: BMW X5 M Sport 40e (LEZ compliant)`,
         ``,
         `Name: ${data.name}`,
         `Phone: ${data.phone}`,
@@ -398,7 +597,7 @@
         `Luggage: ${data.luggage}`
       ];
       if (data.notes?.trim()) lines.push(`Notes: ${data.notes.trim()}`);
-      lines.push(``, `Sent from: ${CONFIG.BUSINESS_NAME}`);
+      lines.push(``, `Sent from: ${CONFIG.REG} website`);
       return lines.join("\n");
     }
 
@@ -411,9 +610,9 @@
       e.preventDefault();
       const data = getFormData();
       const message = buildMessage(data);
-      const url = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      const url = `${waBase}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
-      statusEl.textContent = "Opening WhatsApp… If it doesn’t open, use “Copy booking details”.";
+      statusEl.textContent = "Opening WhatsApp… If it doesn’t open, tap “Copy booking details”.";
     });
 
     document.getElementById("copyBtn").addEventListener("click", async () => {
@@ -421,11 +620,24 @@
       const message = buildMessage(data);
       try{
         await navigator.clipboard.writeText(message);
-        statusEl.textContent = "Copied! Paste into WhatsApp/SMS and send.";
+        statusEl.textContent = "Copied! Paste into WhatsApp and send.";
       }catch(e){
         statusEl.textContent = "Couldn’t auto-copy on this device.";
       }
     });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gleniffer Executive Travel",
+    "telephone": "07727 827100",
+    "areaServed": "Paisley, Renfrewshire",
+    "serviceType": ["Private hire", "Airport transfers", "Executive travel"],
+    "vehicle": "BMW X5 M Sport 40e (LEZ compliant)",
+    "identifier": "UM12HNA"
+  }
   </script>
 </body>
 </html>
