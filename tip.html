@@ -42,6 +42,7 @@
     }
     .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px; }
     .brand{ display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px; white-space:nowrap; }
+    .logo-img{height:34px; width:auto; display:block;}
     .mark{
       width:34px; height:34px; border-radius:12px;
       background: linear-gradient(135deg, var(--gold), rgba(255,255,255,.28));
@@ -108,8 +109,8 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="index.html">
-          <span class="mark" aria-hidden="true"></span>
-          <span id="brandName">Gleniffer Executive Travel</span>
+          <img class="logo-img" src="logo-wordmark.svg" alt="Gleniffer Executive Travel logo"/>
+          <span id="brandName" style="position:absolute;left:-9999px;">Gleniffer Executive Travel</span>
         </a>
         <nav class="links" aria-label="Primary">
           <a href="index.html#book">Book</a>

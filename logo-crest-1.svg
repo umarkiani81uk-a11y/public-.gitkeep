@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Gleniffer Executive Travel crest logo">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4e1ad"/>
+      <stop offset="0.55" stop-color="#d7b46a"/>
+      <stop offset="1" stop-color="#f4e1ad"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="28%" cy="18%" r="95%">
+      <stop offset="0" stop-color="#192336" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#070a0f" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Subtle matte grain (raw edge, not distressed) -->
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 0.08 0" in="noise" result="grainAlpha"/>
+      <feBlend mode="soft-light" in="SourceGraphic" in2="grainAlpha"/>
+    </filter>
+
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Shield -->
+  <g filter="url(#shadow)">
+    <path id="shield" d="M600 110
+             C760 110, 905 170, 1000 270
+             L1000 640
+             C1000 860, 835 1010, 600 1090
+             C365 1010, 200 860, 200 640
+             L200 270
+             C295 170, 440 110, 600 110 Z"
+          fill="url(#sheen)" stroke="url(#gold)" stroke-width="14" />
+    <path d="M600 150
+             C745 150, 870 200, 950 285
+             L950 635
+             C950 835, 805 965, 600 1035
+             C395 965, 250 835, 250 635
+             L250 285
+             C330 200, 455 150, 600 150 Z"
+          fill="none" stroke="rgba(244,225,173,0.35)" stroke-width="5" />
+  </g>
+
+  <!-- Matte grain overlay -->
+  <g filter="url(#grain)">
+    <use href="#shield"/>
+  </g>
+
+  <!-- Gleniffer Braes silhouette (softer, calmer) -->
+  <path d="M275 420
+           C360 345, 465 325, 560 360
+           C640 390, 715 380, 790 345
+           C840 322, 910 325, 965 360"
+        fill="none" stroke="url(#gold)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Road: smooth comfort + brush edge -->
+  <path d="M295 520
+           C430 425, 585 435, 700 505
+           C820 580, 900 560, 965 505"
+        fill="none" stroke="url(#gold)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <path d="M300 528
+           C438 434, 595 444, 705 512
+           C825 586, 900 568, 962 512"
+        fill="none" stroke="rgba(244,225,173,0.35)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+
+  <!-- Subtle central path glow -->
+  <path d="M600 535
+           C508 600, 472 680, 510 770
+           C540 840, 585 910, 600 975
+           C615 910, 660 840, 690 770
+           C728 680, 692 600, 600 535 Z"
+        fill="rgba(215,180,106,0.14)" stroke="rgba(215,180,106,0.42)" stroke-width="4"/>
+
+  <!-- Name lockup -->
+  <g>
+    <path d="M285 640 H915" stroke="rgba(244,225,173,0.20)" stroke-width="2"/>
+    <text x="600" y="725" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', Times, serif"
+          font-size="140" font-weight="700" letter-spacing="6"
+          fill="url(#gold)">GLENIFFER</text>
+
+    <text x="600" y="815" text-anchor="middle"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
+          font-size="48" font-weight="700" letter-spacing="10"
+          fill="#f3f6ff">EXECUTIVE TRAVEL</text>
+  </g>
+
+  <!-- Single night glint (party/affluent cue, minimal) -->
+  <path d="M940 305 L948 325 L968 333 L948 341 L940 361 L932 341 L912 333 L932 325 Z"
+        fill="rgba(244,225,173,0.85)"/>
+</svg>

@@ -47,6 +47,7 @@
     .brand{
       display:flex; align-items:center; gap:10px; font-weight: 900; letter-spacing:.2px; white-space:nowrap;
     }
+    .logo-img{height:34px; width:auto; display:block;}
     .mark{
       width: 34px; height:34px; border-radius: 12px;
       background: linear-gradient(135deg, var(--gold), rgba(255,255,255,.28));
@@ -258,8 +259,8 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top">
-          <span class="mark" aria-hidden="true"></span>
-          <span id="brandName">Gleniffer Executive Travel</span>
+          <img class="logo-img" src="logo-wordmark.svg" alt="Gleniffer Executive Travel logo"/>
+          <span id="brandName" style="position:absolute;left:-9999px;">Gleniffer Executive Travel</span>
         </a>
         <nav class="links" aria-label="Primary">
           <a href="#vehicle">Vehicle</a>
@@ -294,9 +295,19 @@
         <div class="card pad">
           <div class="kicker">Luxury private hire from <span class="gold"><b>Paisley</b></span> • Airport ready</div>
           <h1>BMW X5 M Sport 40e <span class="gold">Luxury</span> Private Hire</h1>
+
+          <div style="display:flex;justify-content:flex-start;gap:12px;align-items:center;margin:10px 0 14px;">
+            <img src="logo-crest-1.svg" alt="Gleniffer Executive Travel crest" style="width:92px;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);padding:8px;">
+            <div style="color:rgba(243,246,255,.72);font-size:13px;line-height:1.35;">
+              <div style="font-weight:900;color:rgba(244,225,173,.95);letter-spacing:.2px;">Luxury private hire • Pre-booked only</div>
+              <div>Airport transfers • Executive travel • Events • Nights out</div>
+            </div>
+          </div>
+
           <p>
             A premium, service-led chauffeur-style experience across Renfrewshire and beyond —
             built for airport transfers, executive travel and special occasions.
+            <br/><span class="gold" style="font-weight:800;">Comfort through the Gleniffer Braes. City-ready edge.</span>
           </p>
 
           <div class="pill-row">
@@ -305,6 +316,7 @@
             <span class="pill">30 mins waiting included</span>
             <span class="pill">Plug-in hybrid comfort</span>
             <span class="pill">CarPlay + Android Auto</span>
+            <span class="pill">PVG checked drivers</span>
           </div>
 
           <div class="note">
@@ -370,6 +382,11 @@
         <p>Luxury feel, professional process, and clear policies.</p>
 
         <div class="grid3" style="margin-top:12px;">
+
+          <div class="card pad" style="box-shadow:none">
+            <h3>PVG checked drivers</h3>
+            <p>Professional, safety-first service — PVG checked.</p>
+          </div>
           <div class="card pad" style="box-shadow:none">
             <h3>Meet &amp; Greet included</h3>
             <p>Arrivals hall pickup included for airport bookings (where access/parking allows).</p>
@@ -585,7 +602,7 @@
       const lines = [
         `✨ *Luxury Private Hire Booking Request*`,
         `Business: ${CONFIG.BUSINESS_NAME}`,
-        `Vehicle: BMW X5 M Sport 40e (LEZ compliant)`,
+        `Vehicle: BMW X5 M Sport 40e (LEZ compliant) • PVG checked drivers`,
         ``,
         `Name: ${data.name}`,
         `Phone: ${data.phone}`,
