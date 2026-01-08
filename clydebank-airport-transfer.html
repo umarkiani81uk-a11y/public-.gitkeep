@@ -9,251 +9,183 @@
   <meta name="description" content="Executive airport transfers from Clydebank. Fixed fares, flight tracking, meet &amp; greet and premium SUV comfort across Renfrewshire and the Glasgow area." />
 
   <style>
-    :root{
-      --bg:#070a0f;
-      --bg2:#0c1220;
-      --card: rgba(14,18,28,.72);
-      --border: rgba(255,255,255,.10);
-      --text:#f3f6ff;
-      --muted: rgba(243,246,255,.72);
-      --gold:#d7b46a;
-      --gold2:#f4e1ad;
-      --shadow: 0 26px 90px rgba(0,0,0,.55);
-      --radius: 22px;
-      --max: 1120px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color: var(--text);
-      background:
-        radial-gradient(900px 500px at 18% 8%, rgba(215,180,106,.22), transparent 60%),
-        radial-gradient(900px 500px at 85% 24%, rgba(120,92,255,.18), transparent 60%),
-        radial-gradient(900px 500px at 65% 85%, rgba(40,215,167,.14), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-      line-height: 1.55;
-    }
-    a{ color:inherit; text-decoration:none; }
-    .container{ width:min(var(--max), calc(100% - 34px)); margin:0 auto; }
-    header{
-      position:sticky; top:0; z-index:100;
-      background: rgba(7,10,15,.62);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 14px 0; gap: 14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; font-weight: 900; letter-spacing:.2px; white-space:nowrap;
-    }
-    .logo-img{height:34px; max-height:34px; width:auto; display:block; object-fit:contain;}
-    .mark{
-      width: 34px; height:34px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--gold), rgba(255,255,255,.28));
-      box-shadow: 0 14px 30px rgba(215,180,106,.14);
-      border: 1px solid rgba(215,180,106,.35);
-    }
-    .links{ display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
-    .links a{
-      padding: 10px 12px; border-radius: 999px;
-      color: rgba(243,246,255,.80);
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.03);
-    }
-    .links a:hover{ border-color: rgba(215,180,106,.42); background: rgba(215,180,106,.06); }
+:root{
+  --bg:#0b0f14;
+  --bg2:#0f1720;
+  --card:#101824;
+  --text:#e7eef8;
+  --muted:#9fb0c7;
+  --line:rgba(255,255,255,.10);
+  --line2:rgba(255,255,255,.06);
+  --shadow: 0 12px 40px rgba(0,0,0,.35);
+  --radius:18px;
+  --radius2:22px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 700px at 15% -10%, rgba(120,160,255,.18), transparent 60%),
+    radial-gradient(900px 600px at 85% 10%, rgba(0,255,200,.10), transparent 55%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit; text-decoration:none}
+a:hover{opacity:.92}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 16px}
+.section{padding:44px 0}
+@media (min-width:768px){ .section{padding:64px 0} }
 
-    main{ padding: 28px 0 44px; }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .pad{ padding: 18px; }
+/* Header */
+header{
+  position:sticky; top:0; z-index:50;
+  border-bottom:1px solid var(--line2);
+  backdrop-filter:saturate(140%) blur(10px);
+  background:rgba(11,15,20,.72);
+}
+.navbar{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px;}
+.brand{display:flex; align-items:center; gap:10px; min-width:0;}
+.brand img{height:34px; width:auto; display:block; object-fit:contain}
+.brand .sub{color:var(--muted); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:45vw}
+.nav{display:flex; align-items:center; gap:12px;}
+.nav a{color:var(--muted); font-weight:700; font-size:14px; padding:10px 10px; border-radius:12px}
+.nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+.nav .cta{background:rgba(255,255,255,.10); color:var(--text); border:1px solid var(--line)}
+.nav .cta:hover{background:rgba(255,255,255,.14)}
+.menuBtn{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:42px; height:42px; border-radius:14px;
+  border:1px solid var(--line); background:rgba(255,255,255,.06);
+  color:var(--text);
+}
+.menuBtn:active{transform:scale(.98)}
+.menuBtn svg{width:20px; height:20px}
+@media (min-width:900px){ .menuBtn{display:none} }
+@media (max-width:899px){
+  .nav{display:none}
+  .nav.open{
+    display:flex;
+    position:absolute;
+    left:16px; right:16px; top:64px;
+    flex-direction:column;
+    padding:10px;
+    border:1px solid var(--line);
+    background:rgba(16,24,36,.98);
+    box-shadow:var(--shadow);
+    border-radius:var(--radius2);
+  }
+  .nav.open a{width:100%}
+}
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 14px;
-      align-items:stretch;
-      margin-top: 14px;
-    }
-    @media (max-width: 920px){ .hero{ grid-template-columns:1fr; } }
+/* Typography / cards */
+h1{font-size:28px; margin:0 0 8px; letter-spacing:.2px}
+@media (min-width:768px){ h1{font-size:36px} }
+h2{font-size:22px; margin:0 0 10px}
+h3{font-size:16px; margin:0 0 8px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.card{
+  border:1px solid var(--line);
+  background:rgba(16,24,36,.88);
+  border-radius:var(--radius2);
+  box-shadow:var(--shadow);
+}
+.pad{padding:18px}
+@media (min-width:768px){ .pad{padding:22px} }
 
-    h1{
-      margin:0 0 12px;
-      font-size: clamp(30px, 4.4vw, 54px);
-      line-height: 1.02;
-      letter-spacing: -0.6px;
-    }
-    h2{
-      margin:0 0 10px;
-      font-size: 20px;
-      letter-spacing: -0.2px;
-    }
-    h3{ margin:0 0 6px; font-size: 16px; letter-spacing: -0.1px; }
-    p{ margin:0; color: var(--muted); }
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      font-size: 13px; color: rgba(243,246,255,.78);
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(215,180,106,.30);
-      background: rgba(215,180,106,.08);
-      width: fit-content;
-    }
-    .gold{ color: var(--gold2); }
-    .pill-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
-    .pill{
-      font-size: 13px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color: rgba(243,246,255,.78);
-    }
-    .pill.gold{
-      border-color: rgba(215,180,106,.34);
-      background: rgba(215,180,106,.08);
-      color: rgba(244,225,173,.95);
-    }
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.10);
+  color:var(--text);
+  font-weight:800;
+}
+.btn:hover{background:rgba(255,255,255,.14)}
+.btn:active{transform:translateY(1px)}
+.btn.small{padding:10px 12px; border-radius:13px; font-size:13px}
+.btn.primary{background:rgba(120,160,255,.22); border-color:rgba(120,160,255,.35)}
+.btn.primary:hover{background:rgba(120,160,255,.28)}
+.btn.full{width:100%}
 
-    section{ margin-top: 14px; }
-    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .grid3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    @media (max-width: 900px){ .grid3{ grid-template-columns:1fr; } }
-    @media (max-width: 720px){ .grid2{ grid-template-columns:1fr; } }
+/* Pills */
+.pills{display:flex; flex-wrap:wrap; gap:8px}
+.pill{
+  display:inline-flex; align-items:center;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid var(--line2);
+  background:rgba(255,255,255,.05);
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+}
+.pill:hover{background:rgba(255,255,255,.07); color:var(--text)}
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      width:100%;
-      padding: 12px 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      color: var(--text);
-      cursor:pointer;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-      user-select:none;
-      font-weight: 800;
-    }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(215,180,106,.34); }
-    .btn.primary{
-      border: 1px solid rgba(215,180,106,.44);
-      background: linear-gradient(135deg, rgba(215,180,106,.92), rgba(244,225,173,.70));
-      color: #0b0f16;
-      box-shadow: 0 18px 44px rgba(215,180,106,.12);
-    }
-    .btn.ghost{ background: rgba(255,255,255,.03); }
+/* Layout */
+.grid3{display:grid; grid-template-columns:1fr; gap:12px}
+@media (min-width:820px){ .grid3{grid-template-columns:repeat(3, 1fr)} }
 
-    .actions{ display:grid; gap:10px; margin-top: 12px; }
-    .small{ font-size: 12px; color: rgba(243,246,255,.65); margin-top: 8px; }
+/* Forms */
+input, textarea, select{
+  width:100%;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.25);
+  color:var(--text);
+  outline:none;
+}
+label{display:block; margin:10px 0 6px; color:var(--muted); font-size:13px; font-weight:700}
+textarea{min-height:110px; resize:vertical}
+.note{
+  border:1px solid rgba(120,160,255,.22);
+  background:rgba(120,160,255,.08);
+  border-radius:16px;
+  padding:12px 12px;
+}
 
-    .note{
-      margin-top: 12px;
-      padding: 12px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      color: rgba(243,246,255,.72);
-      font-size: 13px;
-    }
-    .note strong{ color: rgba(244,225,173,.92); }
-    .list{ margin: 8px 0 0; padding-left: 18px; color: rgba(243,246,255,.70); }
-    .list li{ margin: 6px 0; }
+/* Tables */
+.tableWrap{
+  border:1px solid var(--line2);
+  border-radius:16px;
+  overflow:auto;
+  background:rgba(0,0,0,.18);
+}
+.table{width:100%; border-collapse:collapse; min-width:640px}
+.table th,.table td{padding:12px; border-bottom:1px solid var(--line2); text-align:center; color:var(--muted); font-size:13px}
+.table th{color:var(--text); font-weight:900; background:rgba(255,255,255,.04)}
+.table td:first-child,.table th:first-child{text-align:left}
+.table tr:hover td{background:rgba(255,255,255,.03); color:var(--text)}
+.table tr:last-child td{border-bottom:none}
+@media (max-width:640px){ .table{min-width:520px} }
 
-    .figure{
-      margin:0;
-      overflow:hidden;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .figure img{
-      width:100%;
-      display:block;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      filter: contrast(1.03) saturate(1.03);
-    }
-    .figcap{
-      padding: 12px;
-      color: rgba(243,246,255,.72);
-      border-top: 1px solid rgba(255,255,255,.10);
-      font-size: 13px;
-    }
+/* Footer */
+footer{border-top:1px solid var(--line2); padding:28px 0 36px; color:var(--muted);}
 
-    /* Pricing table */
-    .table{
-      width:100%;
-      border-collapse: collapse;
-      overflow:hidden;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .table th, .table td{
-      padding: 12px 12px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      text-align:left;
-      font-size: 14px;
-    }
-    .table th{ color: rgba(244,225,173,.92); font-size: 13px; letter-spacing:.2px; text-transform: uppercase; }
-    .table tr:last-child td{ border-bottom:none; }
-    .price{ font-weight: 900; color: rgba(243,246,255,.92); }
-    .from{ color: rgba(243,246,255,.60); font-size: 12px; }
+.heroPhoto{
+  height:220px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background:
+    linear-gradient(180deg, rgba(11,15,20,.15), rgba(11,15,20,.72)),
+    url('hero.jpg');
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+@media (min-width:768px){ .heroPhoto{height:260px} }
 
-    /* Form */
-    label{ display:block; font-size: 13px; color: rgba(243,246,255,.72); margin: 10px 0 6px; }
-    input, select, textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      outline:none;
-    }
-    textarea{ min-height: 110px; resize: vertical; }
-    input:focus, select:focus, textarea:focus{
-      border-color: rgba(215,180,106,.48);
-      box-shadow: 0 0 0 4px rgba(215,180,106,.12);
-    }
-
-    /* Floating WhatsApp */
-    .fab{
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 999;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(215,180,106,.36);
-      background: rgba(7,10,15,.70);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 50px rgba(0,0,0,.62);
-      color: rgba(244,225,173,.95);
-      font-weight: 900;
-    }
-    .fab:hover{ background: rgba(7,10,15,.84); }
-    .fab svg{ width:20px; height:20px; flex:0 0 auto; }
-    .fab small{ color: rgba(243,246,255,.70); font-weight: 800; }
-    @media (max-width: 380px){
-      .fab span{ display:none; }
-      .fab{ padding: 12px; }
-    }
-
-    footer{ margin-top: 18px; border-top: 1px solid rgba(255,255,255,.10); padding-top: 16px; color: rgba(243,246,255,.70); font-size: 13px; }
-    .footerlinks a{ color: rgba(244,225,173,.92); }
-    .footerlinks a:hover{ text-decoration: underline; }
-  </style>
+</style>
 
   <link rel="canonical" href="clydebank-airport-transfer.html" />
   <meta property="og:title" content="Clydebank Airport Transfer | Gleniffer Executive Travel"/>
@@ -262,25 +194,31 @@
 </head>
 <body>
 <header>
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="#top">
-          <img class="logo-img" src="logo-wordmark.png" alt="Gleniffer Executive Travel logo"/>
-          <span id="brandName" style="position:absolute;left:-9999px;">Gleniffer Executive Travel</span>
-        </a>
-        <nav class="links" aria-label="Primary">
-          <a href="#vehicle">Vehicle</a>
-          <a href="#included">Included</a>
-          <a href="#fares">Fares</a>
-          <a href="#book">Book</a>
-          <a href="glasgow-airport-transfers.html">Airports</a>
-            <a href="service-area.html">Areas</a>
-            <a href="tip.html">Tip</a>
-          <a href="#reviews">Reviews</a>
-        </nav>
-      </div>
+  <div class="wrap">
+    <div class="navbar">
+      <a class="brand" href="index.html">
+        <img src="logo-wordmark.png" alt="Gleniffer Executive Travel"/>
+        <span class="sub">Executive SUV • Airport transfers • Events</span>
+      </a>
+
+      <button class="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" id="menuBtn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html#book">Book</a>
+        <a href="glasgow-airport-transfers.html">Airports</a>
+        <a href="service-area.html">Areas</a>
+        <a href="tip.html">Tip</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="cta" href="index.html#book">Get a quote</a>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <section class="section">
@@ -358,5 +296,22 @@
         <div class="small">Luxury private hire • Pre‑booked only • © <span id="year"></span></div>
         <div class="small footerlinks"><a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></div>
       </footer>
+<script>
+(function(){
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('navMenu');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    const a = e.target.closest('a');
+    if(!a) return;
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+})();
+</script>
 </body>
 </html>
